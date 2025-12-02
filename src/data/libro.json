@@ -3,6 +3,8 @@
     "title": "Cien años de soledad",
     "author": "Gabriel García Márquez",
     "year": 1967,
-    "genre": "Realismo mágico"  
+    "genre": "Realismo mágico",
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "available": true
     }
 ]

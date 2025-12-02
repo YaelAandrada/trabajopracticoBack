@@ -1,11 +1,19 @@
 const express = require("express");
-const { register } = require("../controllers/auth.controller");
+const { 
+    registerBook, 
+    getBooks, 
+    deleteBook, 
+    updateBook 
+} = require("../controllers/auth.controller");
 
 const router = express.Router();
 
-router.post("/register", register);
-router.post("/login", login);
-
-
+os
+router.post("/register", registerBook);      
+router.get("/", getBooks);                   
+router.get("/:id", getBooks);                
+router.delete("/:id", deleteBook);           
+router.put("/:id", updateBook);             
+router.patch("/:id", updateBook);           
 
 module.exports = router;
