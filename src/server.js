@@ -3,7 +3,8 @@ const express = require("express");
 require("dotenv").config();
 const morgan = require("morgan");
 
-//rutas
+//importar rutas
+const libroAuth = require("./routes/libro.Routes");
 
 
 
@@ -14,6 +15,10 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+//Rutas
+app.use("/libro", libroAuth);
+
 
 //puertos
 const port = process.env.PORT || 5000;
